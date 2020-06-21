@@ -1,0 +1,17 @@
+<aura:component implements="force:appHostable,flexipage:availableForAllPageTypes">
+    
+    <aura:attribute name="item" type="Camping_Item__c"/>
+    <div class="slds-form-element__control">
+        Camping Name: <ui:outputText value="{!v.item.Name}"/>
+    </div>
+    <div class="slds-form-element__control">
+        Price: <ui:outputCurrency value="{!v.item.Price__c}"/>
+    </div>
+    <div class="slds-form-element__control">
+        Quantity:<ui:outputNumber value="{!v.item.Quantity__c}"/>
+    </div>
+    <div class="slds-form-element__control">
+        Packed:<ui:inputCheckbox aura:id="pack" value="{!v.item.Packed__c}"/>
+    </div>
+    
+</aura:component>
